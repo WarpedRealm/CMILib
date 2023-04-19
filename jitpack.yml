@@ -1,5 +1,9 @@
 jdk:
   - openjdk17
 before_install:
+  - mkdir spigot-build
+  - pushd spigot-build
   - wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
   - java -jar BuildTools.jar --rev 1.19.4
+  - popd
+  - rm -rf spigot-build
