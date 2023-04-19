@@ -1,1 +1,7 @@
-/target/
+# Maven
+target/
+!**/src/**/target/
+
+# JetBrains IDEs
+.idea
+*.iml
